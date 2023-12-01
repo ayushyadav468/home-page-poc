@@ -1,6 +1,14 @@
 import React from 'react';
 
-import {Chat, GraduateHat, Rocket, SearchDoc} from '../Icons/library';
+import { Chat, GraduateHat, Rocket, SearchDoc } from '../Icons/library';
+
+type HeaderDataType = {
+  name: string;
+  link_rewrite?: string;
+  children?: HeaderDataType[];
+  module_tag?: string;
+  module_alias?: string;
+};
 
 export const BannerCard: React.FC<HeaderDataType> = ({
   name,

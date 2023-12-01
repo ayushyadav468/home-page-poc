@@ -1,23 +1,42 @@
 {
   "name": "@repo/ui",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.0.1",
+  "description": "poc package description",
+  "private": false,
+  "author": "Ayush Yadav",
+  "license": "ISC",
+  "type": "module",
   "exports": "./src/index.ts",
+  "main": "./dist/index.js",
+  "module": "dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "rollup": "rollup -c",
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
     "@repo/tailwind-config": "*",
+    "@repo/typescript-config": "*",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.5",
     "@turbo/gen": "^1.10.12",
-    "@types/node": "^20.5.2",
     "@types/eslint": "^8.44.7",
+    "@types/node": "^20.5.2",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "eslint": "^8.53.0",
     "react": "^18.2.0",
+    "rollup": "^4.6.1",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-svg": "^2.0.0",
     "typescript": "^5.3.2"
   },
   "peerDependencies": {
