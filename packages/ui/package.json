@@ -4,13 +4,15 @@
   "private": true,
   "exports": {
     "./card": "./src/card.tsx",
-    "./code": "./src/code.tsx"
+    "./code": "./src/code.tsx",
+    "./bannerCard": "./src/bannerCard/index.tsx"
   },
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
+    "@repo/custom-types": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
     "@turbo/gen": "^1.10.12",
@@ -21,5 +23,9 @@
     "eslint": "^8.53.0",
     "react": "^18.2.0",
     "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

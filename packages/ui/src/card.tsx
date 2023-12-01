@@ -1,5 +1,4 @@
 export function Card({
-  className,
   title,
   children,
   href,
@@ -11,7 +10,7 @@ export function Card({
 }): JSX.Element {
   return (
     <a
-      className={className}
+      className='border border-red-500'
       href={`${href}?utm_source=create-turbo&utm_medium=basic&utm_campaign=create-turbo"`}
       rel="noopener noreferrer"
       target="_blank"
