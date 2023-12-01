@@ -10,13 +10,12 @@
     "inlineSources": false,
     "isolatedModules": true,
     "moduleResolution": "Bundler",
+    "module": "ES2015",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "preserveWatchOutput": true,
     "skipLibCheck": true,
     "strict": true
   },
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
