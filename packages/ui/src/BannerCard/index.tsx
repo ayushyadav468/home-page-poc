@@ -1,11 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import {
-  Chat,
-  GraduateHat,
-  Rocket,
-  SearchDoc,
-} from "../Icons/library";
+import {Chat, GraduateHat, Rocket, SearchDoc} from '../Icons/library';
 
 export const BannerCard: React.FC<HeaderDataType> = ({
   name,
@@ -14,38 +9,38 @@ export const BannerCard: React.FC<HeaderDataType> = ({
 }) => {
   const cardColor: any = {
     bgCard: {
-      rocket: "bg-decorative-boost",
-      searchDoc: "bg-decorative-prep",
-      graduateHat: "bg-decorative-learn",
-      chat: "bg-decorative-network",
+      rocket: 'bg-decorative-boost',
+      searchDoc: 'bg-decorative-prep',
+      graduateHat: 'bg-decorative-learn',
+      chat: 'bg-decorative-network',
     },
     bgCirle: {
       rocket: {
-        top: "bg-decorative-boost-circle",
-        side: "bg-decorative-boost-circle-side",
+        top: 'bg-decorative-boost-circle',
+        side: 'bg-decorative-boost-circle-side',
       },
       searchDoc: {
-        top: "bg-decorative-prep-circle",
-        side: "bg-decorative-prep-circle-side",
+        top: 'bg-decorative-prep-circle',
+        side: 'bg-decorative-prep-circle-side',
       },
       graduateHat: {
-        top: "bg-decorative-learn-circle",
-        side: "bg-decorative-learn-circle-side",
+        top: 'bg-decorative-learn-circle',
+        side: 'bg-decorative-learn-circle-side',
       },
       chat: {
-        top: "bg-decorative-network-circle",
-        side: "bg-decorative-network-circle-side",
+        top: 'bg-decorative-network-circle',
+        side: 'bg-decorative-network-circle-side',
       },
     },
     title: {
-      rocket: "text-decorative-boost-title",
-      searchDoc: "text-decorative-prep-title",
-      graduateHat: "text-decorative-learn-title",
-      chat: "text-decorative-network-title",
+      rocket: 'text-decorative-boost-title',
+      searchDoc: 'text-decorative-prep-title',
+      graduateHat: 'text-decorative-learn-title',
+      chat: 'text-decorative-network-title',
     },
   };
 
-  const cardIcon: any = {
+  const cardIcon: Record<string, React.ReactNode> = {
     rocket: (
       <Rocket
         className="h-[40px] w-[42px] -translate-x-[10px] transform md:m-4 md:h-[51px] md:w-[54px] md:translate-x-0 md:-rotate-45 md:transform"
