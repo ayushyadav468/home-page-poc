@@ -2,19 +2,15 @@
   "name": "@repo/ui",
   "version": "0.0.0",
   "private": true,
-  "exports": {
-    "./card": "./src/card.tsx",
-    "./code": "./src/code.tsx",
-    "./bannerCard": "./src/bannerCard/index.tsx"
-  },
+  "exports": "./src/index.ts",
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
-    "@repo/custom-types": "*",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@repo/tailwind-config": "*",
     "@turbo/gen": "^1.10.12",
     "@types/node": "^20.5.2",
     "@types/eslint": "^8.44.7",

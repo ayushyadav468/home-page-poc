@@ -1,13 +1,13 @@
-type headerDataType = {
+type HeaderDataType = {
 	name: string;
 	link_rewrite?: string;
-	children?: headerDataType[];
+	children?: HeaderDataType[];
 	module_tag?: string;
 	module_alias?: string;
 };
 
 type linksComponentDataType = {
-	headerData: headerDataType[];
+	headerData: HeaderDataType[];
 	showMegaDropDown: boolean;
 	showLinks: boolean;
 };
@@ -34,6 +34,7 @@ type HeaderProps = {
 	userIconsData: UserMenuDataProps[];
 	isSaved?: boolean;
 	saveJobHandler?: () => void;
+	className?: string;
 };
 
 type LoginRegisterHandlerType = {

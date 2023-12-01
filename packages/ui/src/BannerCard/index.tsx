@@ -1,5 +1,3 @@
-
-
 import React from "react";
 
 import { Chat, GraduateHat, Rocket } from "../Icons/library";
