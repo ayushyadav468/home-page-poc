@@ -1,4 +1,4 @@
-import {API_ENDPOINT} from '@/constants/appConstant';
+import {API_ENDPOINT} from '@arpittyagi/foundit-utils';
 // import { getSiteProps } from "@/utils";
 // import { headers } from "next/headers";
 import {NextRequest, NextResponse} from 'next/server';

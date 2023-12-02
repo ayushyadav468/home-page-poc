@@ -1,9 +1,9 @@
-import { getSiteProps } from "@/utils";
+import {getSiteProps} from './siteProps';
 
-const THOR = "/thor";
-const ROBIN = "/robin";
-const FALCON = "/falcon";
-const RAVEN = "/raven";
+const THOR = '/thor';
+const ROBIN = '/robin';
+const FALCON = '/falcon';
+const RAVEN = '/raven';
 
 // import { headers } from "next/headers";
 
@@ -11,7 +11,7 @@ const RAVEN = "/raven";
 // const host = window.location.hostname;
 // const host = headerList.get("host");
 
-const siteProps = getSiteProps("qa1.foundit.in");
+const siteProps = getSiteProps('qa1.foundit.in');
 const apiUrl = siteProps?.api_url || null;
 const domain = siteProps?.domain || null;
 const siteMap = siteProps?.site_map || null;
