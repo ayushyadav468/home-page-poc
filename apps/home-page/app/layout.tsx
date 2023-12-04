@@ -1,9 +1,9 @@
-import type {Metadata} from 'next';
+import { HeaderComponent as Header } from '@/components/Header/Header';
+import type { Metadata } from 'next';
 import './globals.css';
-import {HeaderComponent as Header} from '@/components/Header/Header';
 
-import {Noto_Sans} from 'next/font/google';
-import {headers} from 'next/headers';
+import { Noto_Sans } from 'next/font/google';
+import { headers } from 'next/headers';
 
 export const metadata: Metadata = {
   title: 'foundit',
@@ -25,7 +25,6 @@ const getHeader = async () => {
   });
 
   const response = await res.json();
-  console.log({response});
   return response;
 };
 
@@ -35,6 +34,7 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const headerData = await getHeader();
+
   return (
     <html lang="en" className={`${notoSans.className}`}>
       <body className="flex flex-col gap-6">
