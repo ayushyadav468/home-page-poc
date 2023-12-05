@@ -1,11 +1,11 @@
-import { API_ENDPOINT } from '@/constants/appConstant';
+import { API_ENDPOINT } from '@arpittyagi/foundit-utils';
 import { ProductBanner, TodoCard } from '@repo/ui';
-import { headers } from 'next/headers';
+// import { headers } from 'next/headers';
 
 export default function Page(): JSX.Element {
-  const header = headers();
-  const host = header.get("host");
-  const apiEndpoint = API_ENDPOINT(host).thorApi.bannerList;
+  // const header = headers();
+  // const host = header.get("host");
+  const apiEndpoint = API_ENDPOINT.thorApi.bannerList;
 
   return (
     <main>
