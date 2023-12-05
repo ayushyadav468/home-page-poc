@@ -19,6 +19,7 @@
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
+    "@arpittyagi/foundit-utils": "*",
     "@repo/eslint-config": "*",
     "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",

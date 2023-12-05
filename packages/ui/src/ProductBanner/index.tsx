@@ -1,3 +1,5 @@
+import { API_ENDPOINT } from '@arpittyagi/foundit-utils';
+
 import { BannerCard } from "../BannerCard";
 
 const getBanner = async (apiEndpoint: string) => {
@@ -9,8 +11,14 @@ const getBanner = async (apiEndpoint: string) => {
   return response as HeaderDataType[];
 };
 
-export const ProductBanner = async ({ apiEndpoint }: { apiEndpoint: string }) => {
-  const banners = await getBanner(apiEndpoint);
+export const ProductBanner = async ({ apiEndpoint }: { apiEndpoint?: string }) => {
+  let banners: HeaderDataType[] = [];
+
+  if (apiEndpoint) {
+    banners = await getBanner(apiEndpoint);
+  } else {
+    banners = await getBanner(API_ENDPOINT.thorApi.bannerList);
+  }
 
   return (
     <>
