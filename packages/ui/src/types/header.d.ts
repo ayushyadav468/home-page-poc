@@ -1,9 +1,10 @@
 type HeaderDataType = {
 	name: string;
-	link_rewrite?: string;
+	link_rewrite: string;
 	children?: HeaderDataType[];
 	module_tag?: string;
 	module_alias?: string;
+	id?: string;
 };
 
 type linksComponentDataType = {
