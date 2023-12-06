@@ -1,24 +1,25 @@
-import { API_ENDPOINT } from '@arpittyagi/foundit-utils';
+import { useEffect, useState } from "react";
 
-import { BannerCard } from "../BannerCard";
+import { API_ENDPOINT } from '../../../utlis';
+import { BannerCard } from "../../BannerCard";
 
-const getBanner = async (apiEndpoint: string) => {
-  const res = await fetch(apiEndpoint, {
-    method: "GET",
-  });
-  const response = await res.json();
+export const ClientProductBanner = ({ apiEndpoint }: { apiEndpoint?: string }) => {
+  const [banners, setBanners] = useState<HeaderDataType[]>([]);
 
-  return response as HeaderDataType[];
-};
+  const getBanner = async (apiEndpoint: string) => {
+    const res = await fetch(apiEndpoint, {
+      method: "GET",
+    });
+    const response = await res.json();
 
-export const ProductBanner = async ({ apiEndpoint }: { apiEndpoint?: string }) => {
-  let banners: HeaderDataType[] = [];
+    setBanners(response as HeaderDataType[]);
+  };
 
-  if (apiEndpoint) {
-    banners = await getBanner(apiEndpoint);
-  } else {
-    banners = await getBanner(API_ENDPOINT.thorApi.bannerList);
-  }
+  useEffect(() => {
+    const updatedAPIEndpoint = apiEndpoint || API_ENDPOINT.thorApi.bannerList;
+
+    getBanner(updatedAPIEndpoint);
+  }, [apiEndpoint])
 
   return (
     <>

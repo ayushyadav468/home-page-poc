@@ -1,5 +1,5 @@
 import './style.css';
 
 export * from './BannerCard';
-export * from './ProductBanner';
-export * from './TodoCard';
+export * from './client/ProductBanner';
+export * from './server/ProductBanner';
